@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: $xxl;
+  margin: 0 auto;
+  background-color: gray;
+
+  //   media
+  @include xl($xl) {
+    background-color: rosybrown;
+  }
+  @include lg($lg) {
+    background-color: green;
+  }
+  @include md($md) {
+    background-color: yellow;
+  }
+  @include sm($sm) {
+    background-color: orange;
+  }
+}

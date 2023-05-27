@@ -1,0 +1,54 @@
+@mixin sm($size) {
+  @media (max-width: 577px) {
+    @content;
+    max-width: $size;
+    min-height: 100px;
+  }
+  //     @include sm($sm) {
+  //     width: 100%;
+  //     min-height: 100vh;
+  //     background-color: red;
+  //   }
+}
+@mixin md($size) {
+  @media (max-width: 766px) {
+    @content;
+    max-width: $size;
+    min-height: 100px;
+  }
+}
+
+@mixin lg($size) {
+  @media (max-width: 990px) {
+    @content;
+    max-width: $size;
+    min-height: 100px;
+  }
+}
+
+@mixin xl($size) {
+  @media (max-width: 1199px) {
+    @content;
+    max-width: $size;
+    min-height: 100px;
+  }
+}
+
+@mixin xxl($size) {
+  @media (max-width: 1399px) {
+    @content;
+    max-width: $size;
+    min-height: 100px;
+  }
+}
+// font
+@mixin font($color, $size: 25, $weight: 500, $lheight: 150%) {
+  font-size: $size + px;
+  font-weight: 900;
+  line-height: $lheight;
+  color: $color;
+  @content;
+}
+// @include font(red, 50, 300, 150%) {
+//   text-transform: capitalize;
+// }

@@ -1,0 +1,11 @@
+header {
+  .header__wrapper {
+    height: 48px;
+    background-color: rebeccapurple;
+    .left {
+      width: 50%;
+      height: 100%;
+      background-color: green;
+    }
+  }
+}
