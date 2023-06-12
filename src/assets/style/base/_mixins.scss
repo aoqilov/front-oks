@@ -1,54 +1,73 @@
-@mixin sm($size) {
-  @media (max-width: 577px) {
+@mixin sm {
+  @media screen and (max-width: $sm) {
     @content;
-    max-width: $size;
-    min-height: 100px;
+    .container {
+      max-width: 576px;
+    }
   }
-  //     @include sm($sm) {
-  //     width: 100%;
-  //     min-height: 100vh;
-  //     background-color: red;
-  //   }
 }
-@mixin md($size) {
-  @media (max-width: 766px) {
+@mixin md {
+  @media screen and (max-width: $md) {
     @content;
-    max-width: $size;
-    min-height: 100px;
+    .container {
+      max-width: 765px;
+    }
   }
 }
 
-@mixin lg($size) {
-  @media (max-width: 990px) {
+@mixin lg {
+  @media screen and (max-width: $lg) {
     @content;
-    max-width: $size;
-    min-height: 100px;
+    .container {
+      max-width: 990px;
+    }
   }
 }
 
-@mixin xl($size) {
-  @media (max-width: 1199px) {
+@mixin xl {
+  @media screen and (max-width: $xl) {
     @content;
-    max-width: $size;
-    min-height: 100px;
+    .container {
+      max-width: 1198px;
+    }
   }
 }
 
-@mixin xxl($size) {
-  @media (max-width: 1399px) {
+@mixin xxl {
+  @media screen and (max-width: $xxl) {
     @content;
-    max-width: $size;
-    min-height: 100px;
+    .container {
+      max-width: 1398px;
+    }
   }
 }
 // font
-@mixin font($color, $size: 25, $weight: 500, $lheight: 150%) {
-  font-size: $size + px;
-  font-weight: 900;
-  line-height: $lheight;
+@mixin font(
+  $color: #000,
+  $font-size: 16px,
+  $line-height: 150%,
+  $font-weigth: 500,
+  $margin-bottom: 0px,
+  $font-family: "sans-serif"
+) {
   color: $color;
-  @content;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weigth;
+  margin-bottom: $margin-bottom;
+  font-family: $font-family;
 }
-// @include font(red, 50, 300, 150%) {
-//   text-transform: capitalize;
-// }
+// qator kesib beruvchi
+@mixin sliceText($num: 1, $word-break: normal) {
+  display: -webkit-box !important;
+  -webkit-line-clamp: $num !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  word-break: $word-break;
+  // ishlatilishi
+  // @include sliceText(2) bosin dgani
+}
+@mixin center {
+  display: flex;
+  align-items: center;
+}

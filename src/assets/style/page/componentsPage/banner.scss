@@ -1,0 +1,154 @@
+.banner {
+  width: 100%;
+  height: 452px;
+  margin-top: 60px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 24% 24% 49%;
+  gap: 1.33%;
+  //   media
+  @include lg {
+    grid-template-columns: 100%;
+    margin-top: 35px;
+    .first,
+    .second {
+      display: none;
+    }
+  }
+  @include sm {
+    display: none;
+  }
+  &__cardbox {
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+    .titlebox {
+      width: 97%;
+      height: 117px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 10px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(5px);
+      border-radius: 12px;
+      padding: 16px;
+      h3 {
+        @include font(#000, 25px, 29px, 400, 16px, "Roboto");
+        @include sliceText(1);
+        text-transform: capitalize;
+      }
+      p {
+        @include font(rgba(0, 0, 0, 0.75), 14px, 20px, 400, 0, "Roboto");
+        @include sliceText(2);
+      }
+    }
+  }
+  .three {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    .swiper-info {
+      width: 100px;
+      height: 50px;
+      position: absolute;
+      left: 80%;
+      bottom: 10px;
+      z-index: 30;
+      .swiper-pagination-bullet {
+        background-color: red;
+        width: 10px;
+        height: 10px;
+        margin: 30px 2px 0 2px;
+        // background: #ffffff80;
+        display: inline-block;
+        border-radius: 3px;
+        &.swiper-pagination-bullet-active {
+          width: 20px;
+          background-color: white;
+          border-radius: 3px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .three__arrowbox {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+      width: 97%;
+      height: 40px;
+
+      .btn-box {
+        width: 40px;
+        height: 40px;
+        background-color: var(--mainF5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        &:hover {
+          cursor: pointer;
+        }
+        .icon-arrow {
+          font-size: 18px;
+        }
+      }
+    }
+    .swiper {
+      height: 100%;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+    .titlebox {
+      background-color: rebeccapurple;
+      width: 97%;
+      height: 117px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 10px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(5px);
+      border-radius: 12px;
+      padding: 16px;
+      h3 {
+        @include font(#000, 25px, 29px, 400, 16px, "Roboto");
+        @include sliceText(1);
+        text-transform: capitalize;
+        width: 70%;
+      }
+      p {
+        width: 70%;
+        @include font(rgba(0, 0, 0, 0.75), 14px, 20px, 400, 0, "Roboto");
+        @include sliceText(2);
+        // media
+        @include lg {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

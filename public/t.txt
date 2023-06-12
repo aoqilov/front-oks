@@ -1,0 +1,22 @@
+    <div className="card__imgbox">
+              <img src="" alt="" />
+            </div>
+            <div className="card__info">
+              <h5>title</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quaerat omnis ullam asperiores doloribus nesciunt doloremque?
+              </p>
+            </div>
+            <div className="card__user">
+              <div className="user-image">
+                <img src="" alt="" />
+              </div>
+              <div className="user-name">
+                <h5>john doe</h5>
+                <p>20.04.2000</p>
+              </div>
+              <div className="user-save">
+                <BsBookMarkPlus />
+              </div>
+            </div>

@@ -1,0 +1,78 @@
+.tags {
+  height: 68px;
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @include xl {
+    display: none;
+  }
+  &__items {
+    width: 100%;
+    height: 68px;
+    background-color: var(--mainF5);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 12px;
+    padding: 5px 5px;
+    overflow: hidden;
+    &:hover {
+      cursor: grab;
+    }
+    &:active {
+      cursor: grabbing;
+    }
+  }
+  &__item {
+    position: relative;
+    min-width: 170px;
+    min-height: 48px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-right: 25px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      filter: blur(2.5px);
+    }
+    p {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include font(#fff, 16px, 19px, 500, 0, "Roboto");
+      text-transform: capitalize;
+      &:hover {
+        color: skyblue;
+        cursor: pointer;
+      }
+    }
+  }
+  &__btn-next {
+    z-index: 6;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -30px 0px 15px white;
+    .next {
+      width: 24px;
+      height: 24px;
+      z-index: 5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        box-shadow: 2px 2px 7px whitesmoke;
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

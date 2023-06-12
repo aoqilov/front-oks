@@ -4,7 +4,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
+}
+html,
+body {
+  height: 100%;
 }
 
 h1,
@@ -16,10 +19,20 @@ h6 {
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: var(--bodyBg);
+  &.dark {
+    background-color: red;
+  }
+}
+
 ul {
   list-style: none;
 }
-
+input {
+  border: none;
+  outline: none;
+}
 img {
   max-width: 100%;
   height: auto;
